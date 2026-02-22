@@ -144,7 +144,7 @@ async function handleLogout() {
     return;
   }
 
-  window.location.replace("/auth.html");
+  window.location.replace("/signin.html");
 }
 
 if (logoutBtn) {

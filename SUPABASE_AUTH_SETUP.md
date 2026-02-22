@@ -1,6 +1,6 @@
 ﻿# Supabase 회원가입/로그인 적용 가이드
 
-이 문서는 이 저장소의 `auth.html`, `account.html`를 Supabase Auth와 연결하는 순서입니다.
+이 문서는 이 저장소의 `signin.html`, `member.html`를 Supabase Auth와 연결하는 순서입니다.
 
 ## 0) 준비물
 
@@ -26,7 +26,7 @@ Dashboard > Authentication에서 아래를 확인합니다.
 2. Confirm email 사용 여부 결정
 3. URL Configuration 설정
    - Site URL: `https://wgwgw.pages.dev`
-   - Redirect URLs: `https://wgwgw.pages.dev/account.html`
+   - Redirect URLs: `https://wgwgw.pages.dev/member.html`
 
 ## 3) 이 프로젝트에 키 입력
 
@@ -64,11 +64,11 @@ supabase db push
 ## 6) 로컬 확인
 
 1. 정적 서버로 사이트 실행
-2. `/auth.html` 접속
+2. `/signin.html` 접속
 3. 회원가입
 4. 이메일 인증(Confirm email 사용 시)
 5. 로그인
-6. `/account.html`에서 사용자 정보와 로그아웃 동작 확인
+6. `/member.html`에서 사용자 정보와 로그아웃 동작 확인
 
 ## 7) 배포
 
@@ -79,8 +79,8 @@ git push origin main
 ```
 
 배포 후 확인:
-- `https://wgwgw.pages.dev/auth.html`
-- `https://wgwgw.pages.dev/account.html`
+- `https://wgwgw.pages.dev/signin.html`
+- `https://wgwgw.pages.dev/member.html`
 
 ## 8) 자주 발생하는 문제
 
