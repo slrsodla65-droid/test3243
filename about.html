@@ -81,7 +81,8 @@
         <a class="active" href="/about">소개</a>
         <a href="/contact">문의</a>
         <a href="/privacy">개인정보처리방침</a>
-        <a href="/signin">로그인</a>
+        <a href="/signin" data-auth-login>로그인</a>
+        <a href="#" data-auth-logout hidden>로그아웃</a>
       </nav>
     </div>
   </header>
@@ -125,6 +126,7 @@
     </div>
   </footer>
 
+  <script type="module" src="auth-nav.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>

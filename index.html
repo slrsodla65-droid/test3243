@@ -920,7 +920,8 @@ img {
           <a href="/about">소개</a>
           <a href="/contact">문의</a>
           <a href="/privacy">개인정보처리방침</a>
-          <a href="/signin">로그인</a>
+          <a href="/signin" data-auth-login>로그인</a>
+          <a href="#" data-auth-logout hidden>로그아웃</a>
         </nav>
         <label class="theme-picker-label" for="theme-select">테마</label>
         <select id="theme-select" class="theme-select" aria-label="테마 선택">
@@ -1161,6 +1162,7 @@ img {
     </div>
   </footer>
 
+  <script type="module" src="auth-nav.js"></script>
   <script>
     const TM_MODEL_BASE_URL = "https://teachablemachine.withgoogle.com/models/4ItTy4E8y/";
     const TM_TFJS_URL = "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js";
