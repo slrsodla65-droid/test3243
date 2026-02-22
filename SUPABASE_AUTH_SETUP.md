@@ -26,7 +26,7 @@ Dashboard > Authentication에서 아래를 확인합니다.
 2. Confirm email 사용 여부 결정
 3. URL Configuration 설정
    - Site URL: `https://wgwgw.pages.dev`
-   - Redirect URLs: `https://wgwgw.pages.dev/member.html`
+   - Redirect URLs: `https://wgwgw.pages.dev/member`
 
 ## 3) 이 프로젝트에 키 입력
 
@@ -64,11 +64,11 @@ supabase db push
 ## 6) 로컬 확인
 
 1. 정적 서버로 사이트 실행
-2. `/signin.html` 접속
+2. `/signin` 접속
 3. 회원가입
 4. 이메일 인증(Confirm email 사용 시)
 5. 로그인
-6. `/member.html`에서 사용자 정보와 로그아웃 동작 확인
+6. `/member`에서 사용자 정보와 로그아웃 동작 확인
 
 ## 7) 배포
 
@@ -79,8 +79,8 @@ git push origin main
 ```
 
 배포 후 확인:
-- `https://wgwgw.pages.dev/signin.html`
-- `https://wgwgw.pages.dev/member.html`
+- `https://wgwgw.pages.dev/signin`
+- `https://wgwgw.pages.dev/member`
 
 ## 8) 자주 발생하는 문제
 

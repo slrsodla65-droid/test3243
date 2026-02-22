@@ -60,7 +60,7 @@ async function redirectIfLoggedIn() {
   }
 
   if (data.session) {
-    window.location.replace("/member.html");
+    window.location.replace("/member");
   }
 }
 
@@ -93,7 +93,7 @@ async function handleSignUp(event) {
     email,
     password,
     options: {
-      emailRedirectTo: `${window.location.origin}/member.html`,
+      emailRedirectTo: `${window.location.origin}/member`,
       data: fullName ? { full_name: fullName } : undefined,
     },
   });
@@ -107,7 +107,7 @@ async function handleSignUp(event) {
 
   if (data.session) {
     setStatus("success", "회원가입과 로그인이 완료되어 계정 페이지로 이동합니다.");
-    window.location.replace("/member.html");
+    window.location.replace("/member");
     return;
   }
 
@@ -150,7 +150,7 @@ async function handleSignIn(event) {
   }
 
   setStatus("success", "로그인 성공. 계정 페이지로 이동합니다.");
-  window.location.replace("/member.html");
+  window.location.replace("/member");
 }
 
 if (!isSupabaseConfigured) {
