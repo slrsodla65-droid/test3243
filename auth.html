@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InstaMoment Lab 회원가입/로그인 페이지입니다. Supabase Auth를 사용해 이메일 기반 계정 생성과 로그인을 제공합니다.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="author" content="InstaMoment Lab">
+  <meta name="theme-color" content="#1570ef">
+  <link rel="canonical" href="https://wgwgw.pages.dev/auth">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="InstaMoment Lab">
+  <meta property="og:title" content="로그인 | InstaMoment Lab">
+  <meta property="og:description" content="Supabase Auth 기반 로그인/회원가입 페이지입니다.">
+  <meta property="og:url" content="https://wgwgw.pages.dev/auth">
+  <meta property="og:image" content="https://wgwgw.pages.dev/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="로그인 | InstaMoment Lab">
+  <meta name="twitter:description" content="Supabase Auth 기반 로그인/회원가입 페이지입니다.">
+  <meta name="twitter:image" content="https://wgwgw.pages.dev/og-image.png">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=20260220">
+  <link rel="shortcut icon" href="favicon.ico?v=20260220">
+  <title>로그인 | InstaMoment Lab</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="logo" href="/">InstaMoment <span>Lab</span></a>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="/">홈</a>
+        <a href="/about">소개</a>
+        <a href="/contact">문의</a>
+        <a href="/privacy">개인정보처리방침</a>
+        <a class="active" href="/auth">로그인</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-main">
+    <article class="page-card auth-layout">
+      <h1>회원가입 / 로그인</h1>
+      <p>Supabase 이메일 인증 기반 계정 시스템입니다. 처음이면 회원가입, 기존 계정이면 로그인을 사용하세요.</p>
+
+      <p id="auth-status" class="status-box" data-type="info">
+        회원가입 또는 로그인을 진행해 주세요.
+      </p>
+
+      <section class="auth-grid" aria-label="회원가입 및 로그인 폼">
+        <form id="signup-form" class="contact-form auth-form" novalidate>
+          <h2>회원가입</h2>
+
+          <label for="signup-name">이름(선택)</label>
+          <input id="signup-name" name="full_name" type="text" placeholder="홍길동">
+
+          <label for="signup-email">이메일</label>
+          <input id="signup-email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="signup-password">비밀번호 (8자 이상)</label>
+          <input id="signup-password" name="password" type="password" minlength="8" required>
+
+          <button class="btn primary" type="submit">가입하기</button>
+        </form>
+
+        <form id="login-form" class="contact-form auth-form" novalidate>
+          <h2>로그인</h2>
+
+          <label for="login-email">이메일</label>
+          <input id="login-email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="login-password">비밀번호</label>
+          <input id="login-password" name="password" type="password" required>
+
+          <button class="btn primary" type="submit">로그인하기</button>
+        </form>
+      </section>
+
+      <p class="muted auth-note">
+        이메일 인증이 켜져 있으면 회원가입 후 메일함에서 인증 링크를 먼저 클릭해야 로그인됩니다.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/about">소개</a>
+        <a href="/contact">문의</a>
+        <a href="/privacy">개인정보처리방침</a>
+        <a href="/auth">로그인</a>
+      </div>
+      <div>© <span id="year"></span> InstaMoment Lab</div>
+    </div>
+  </footer>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

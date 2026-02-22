@@ -1,1 +1,5 @@
 https://www.wgwgw.pages.dev/* https://wgwgw.pages.dev/:splat 301!
+/auth /auth.html 200
+/account /account.html 200
+/auth/ /auth.html 200
+/account/ /account.html 200
